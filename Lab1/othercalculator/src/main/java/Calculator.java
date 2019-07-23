@@ -26,14 +26,14 @@ public class Calculator extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
  
-  		String add1 = request.getParameter("add1").trim() ;
+  		/*String add1 = request.getParameter("add1").trim() ;
 		String add2 = request.getParameter("add2").trim();
 		String mult1 = request.getParameter("mult1").trim();
 		String mult2 = request.getParameter("mult2").trim();
 
 		String sum = "";
 		String product = "";
-		
+
 		// Check for valid inputs....
 		try {
 			Integer a1 = Integer.parseInt(add1);
@@ -44,12 +44,12 @@ public class Calculator extends HttpServlet {
 			if (add2.isEmpty()) add2 = "''";
 			sum = "''";
 		}
-		
-		/*
-		 * Integer.parseInt(str) throws NumberFormatException 
+
+		*//*
+		 * Integer.parseInt(str) throws NumberFormatException
 		 * if the string cannot be converted to an integer.
-		 */
-		
+		 *//*
+
 		try {
 			Integer m1 = Integer.parseInt(mult1);
 			Integer m2 = Integer.parseInt(mult2);
@@ -59,8 +59,8 @@ public class Calculator extends HttpServlet {
 			if (mult2.isEmpty()) mult2 = "''";
 			product = "''";
 		}
-		
- 
+
+
 		// Another "view" of how to use PrintWriter
 		response.setContentType("text/html");
 		response.setHeader("Cache-Control", "no-cache");
@@ -77,7 +77,10 @@ public class Calculator extends HttpServlet {
 		sb.append("<input type = 'text' size = '4' name = 'product'" + "value = " + product + " readonly  /><br/>");
 		sb.append("<input type = 'submit' value = 'Submit'/>");
 		sb.append("</form></body></html>");
-		writer.println(sb.toString());
+		writer.println(sb.toString());*/
+		response.sendRedirect("result.jsp");
+
+
 	}
 
 	/**
