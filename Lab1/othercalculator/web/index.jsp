@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/calc2"> Calculator </a>>
+<a href="calc2"> Calculator </a>
 </body>
 </html>
