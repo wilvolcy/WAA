@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+    <link rel="stylesheet" th:href="@{css/main.css}"  type="text/css"/>
+</head>
+
+<body>
+
+<div id="global">
+<!--    <form:form modelAttribute="employee" action="employee_save" method="post">-->
+        <form  action="#" th:action="@{/employee_save}" th:object="${employee}" method="post">
+
+
+        <fieldset>
+            <legend>Add an employee</legend>
+            <p>
+<!--                <form:errors path="*" cssStyle="color : red;" />-->
+            </p>
+            <p>
+                <label>ID: </label>
+<!--                <form:input path="id" id="id" />-->
+                    <input type="text" th:field ="*{id}">
+
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="id" cssStyle="color : red;" />-->
+<!--            </div>-->
+<!--            </p>-->
+            <p>
+                <label for="firstName">First Name: </label>
+             <input type="text" th:field ="*{firstName}">
+
+<!--                <form:input path="firstName" />-->
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="firstName" cssStyle="color : red;" />-->
+<!--            </div>-->
+            </p>
+            <p>
+                <label for="lastName">Last Name: </label>
+                <input type="text" th:field ="*{lastName}">
+<!--                <form:input path="lastName" />-->
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="lastName" cssStyle="color : red;" />-->
+<!--            </div>-->
+            </p>
+
+            <p>
+                <label for="birthDate">Date Of Birth: </label>
+                <input type="text" th:fied ="*{birthDate}">
+<!--                <form:input path="birthDate" id="birthDate" />-->
+<!--                <form:errors path="birthDate" cssStyle="color : red;" />-->
+            </p>
+            <p>
+                <label for="salaryLevel">Salary: </label>
+                <input type="text" th:field="*{salaryLevel}">
+<!--                <form:input path="salaryLevel" id="salaryLevel" />-->
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="salaryLevel" cssStyle="color : red;" />-->
+<!--            </div>-->
+            </p>
+            <h4>Address:</h4>
+            <p>
+                <label for="street">Street: </label>
+                <input type="text" th:field ="*{address.street}">
+<!--                <form:input path="address.street" id="street" />-->
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="address.street" cssStyle="color : red;" />-->
+<!--            </div>-->
+            </p>
+            <p>
+                <label for="state">State: </label>
+                <input type="text" th:field="*{address.state}">
+<!--                <form:input path="address.state" id="state" />-->
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="address.state" cssStyle="color : red; " />-->
+<!--            </div>-->
+            </p>
+            <p>
+                <label for="zipCode">Zip: </label>
+                <input type="text" th:field="*{address.zipCode}">
+<!--                <form:input path="address.zipCode" id="zipCode" />-->
+<!--            <div style="text-align: center;">-->
+<!--                <form:errors path="address.zipCode" cssStyle="color : red; " />-->
+<!--            </div>-->
+            </p>
+            <p id="buttons">
+                <input id="reset" type="reset" tabindex="4">
+                <input id="submit" type="submit" tabindex="5" value="Add Employee">
+            </p>
+        </fieldset>
+<!--    </form:form>-->
+        </form>
+</div>
+</body>
+</html>
